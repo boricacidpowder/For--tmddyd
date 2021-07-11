@@ -28,7 +28,7 @@ $(document).bind('keydown', (e) => {
 */
 // window.onkeydown = function() {
 // 	var kcode = event.keyCode;
-// 	console.log(event.keyCode);
+// 	console.log(event.keyCode)
 // 	if(kcode == 70 && kcode.ctrlKey == true){
 // 		console.log(event.returnValue,' 아 일단 됨.');
 // 		
@@ -43,3 +43,18 @@ window.addEventListener('keydown', (e) => {
 		
 	}
 })
+
+// document.ul.style.backgroundColor = 'red';
+
+//창을 켜고 본다
+window.onload = () => {
+	/*
+	 * 1. 각 li태그를 순회하며 삭제가 있는지 확인한다.
+	 * 2. 삭제가 있다면, 그 li태그의 배색을 바꾼다.
+	 */
+	$("li").each(function( index, element ) {
+		if(index > 3 && element.childElementCount == 5){
+			element.style.backgroundColor = 'green'
+		}
+	});
+};
